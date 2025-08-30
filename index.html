@@ -1,0 +1,56 @@
+  <html lang="en">
+   <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+     Sis &amp; Bro
+    </title>
+        <link rel="icon" href="./img/favicon.png.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+    <div class="relative min-h-screen flex flex-col items-center justify-center text-center px-4" style="background-color: transparent;">
+     <img alt="foto bareng" class="absolute inset-0 w-full h-full object-cover grayscale-img" height="900" src="./img/ft1.jpg" width="600"/>
+       <div class="absolute inset-0 bg-black/60"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black"></div>
+    <div class="h-screen flex items-end justify-center mb-3">
+     <div class="relative z-10 max-w-md">
+       <p class="text-emas text-sm mb-3 font-dosis">
+       Wedding Invitation
+      </p>
+      <h2 class="text-7xl text-emas font-latin">
+       Sis &amp; Bro
+      </h2>
+      <p class="text-emas text-sm mt-3 mb-2 leading-relaxed font-dosis">
+       Kepada yth. bapak/ibu/saudara/i
+      </p>
+      <h3 id="penerima" class="text-2xl font-old text-emas mb-3"></h3>
+      <a href="home.html">
+      <button class="bg-abang text-emas text-xl rounded-xl px-12 py-2 tracking-wide font-old mb-7">
+       Buka
+      </button>
+      </a>
+     </div>
+    </div>
+    </div>
+      <script>
+      // Ambil parameter dari URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('to'); // baca nilai ?to=
+  
+      // Kalau ada nama → tampilkan di <h3>
+      if (nama) {
+        document.getElementById("penerima").innerText = nama;
+      }
+    </script>
+   </body>
+  </html>

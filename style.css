@@ -1,0 +1,47 @@
+.text-emas {
+  color: #f1d993;
+}
+
+.text-abang {
+  color: #56001d;
+}
+
+.text-ireng {
+  color: #111111;
+}
+
+.text-semi {
+  color: #ffebed;
+}
+
+.bg-abang {
+  background-color: #56001d;
+}
+
+.bg-semi {
+  background-color: #ffebed;
+}
+
+
+.font-dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-latin {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-old {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grayscale-img {
+  filter: grayscale(30%); /* 100% = full grayscale, 0% = normal */
+}

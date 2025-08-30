@@ -1,0 +1,400 @@
+  <html lang="en">
+   <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+     Sis &amp; Bro
+    </title>
+    <link rel="icon" href="./img/favicon.png.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+    <!-- SECTION: Hero -->
+<section class="relative min-h-screen flex items-center justify-center text-center px-4">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover brightness-10">
+    <source src="./video/bgv.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#56001d]/40 to-[#56001d]"></div>
+
+  <div class="relative z-10 max-w-xl text-center text-[#f1d993]">
+    <h2 class="text-lg font-dosis mb-2">The Wedding of</h2>
+    <h1 class="text-7xl font-latin mb-4 text-center">Sis <br> &amp; <br> Bro</h1>
+    <p class="text-lg font-dosis mb-2">Senin, 18 Desember 2028</p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="flex gap-4 text-center text-[#f1d993]">
+      <div><span id="days" class="block text-3xl font-old">00</span><span class="text-sm font-dosis">Hari</span></div>
+      <div><span id="hours" class="block text-3xl font-old">00</span><span class="text-sm font-dosis">Jam</span></div>
+      <div><span id="minutes" class="block text-3xl font-old">00</span><span class="text-sm font-dosis">Menit</span></div>
+      <div><span id="seconds" class="block text-3xl font-old">00</span><span class="text-sm font-dosis">Detik</span></div>
+    </div>
+  </div>
+</section>
+<section class="bg-abang pt-8">
+      <div class="w-full h-20 bg-white rounded-t-[100%] flex justify-center items-center">
+  <img class="h-16 w-auto" src="./img/bismilah.png" alt="" />
+</div>
+</section>
+
+<div id="mempelai"></div>
+<div id="qoutes"></div>
+<div id="acara"></div>
+<div id="story"></div>
+<div id="gallery"></div>
+<div id="closing"></div>
+
+<!-- rsvp -->
+<section id="rsvp" class="bg-white py-9">
+        <div class="grid grid-cols-3 gap-4 text-center mb-8 mx-4 reveal slide-down opacity-0 -translate-y-10 transition-all duration-1000 ease-out">
+      <div class="bg-abang p-4 rounded-lg shadow">
+        <h3 class="text-5xl font-old text-emas" id="countHadir">0</h3>
+        <p class="font-dosis text-semi text-sm">Hadir</p>
+      </div>
+      <div class="bg-abang p-4 rounded-lg shadow">
+        <h3 class="text-5xl font-old text-emas" id="countTidak">0</h3>
+        <p class="font-dosis text-semi text-sm">Tidak Hadir</p>
+      </div>
+      <div class="bg-abang p-4 rounded-lg shadow">
+        <h3 class="text-5xl font-old text-emas" id="countRagu">0</h3>
+        <p class="text-semi font-dosis text-sm">Ragu</p>
+      </div>
+    </div>
+        
+           <!-- Form RSVP -->
+   <div class="bg-semi p-6 rounded-2xl shadow-lg mb-8 mx-4 reveal zoom-in opacity-0 scale-95 transition-all duration-1000 ease-out">
+  <form id="rsvpForm" class="space-y-4">
+    <input type="text" id="nama" placeholder="Nama" required
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#56001d] font-dosis text-ireng placeholder-gray-500">
+
+    <select id="status" required
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#56001d] font-dosis text-ireng">
+      <option value="" disabled selected>Konfirmasi Kehadiran</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+      <option value="Ragu">Ragu</option>
+    </select>
+
+    <textarea id="ucapan" placeholder="Tulis ucapan..." rows="3"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#56001d] font-dosis text-ireng placeholder-gray-500"></textarea>
+
+    <button type="submit"
+      class="w-full bg-abang text-emas py-2 rounded-lg font-dosis">
+      Kirim
+    </button>
+  </form>
+</div>
+
+
+    <!-- List Ucapan -->
+    <!-- List Ucapan -->
+<div class="bg-semi p-6 rounded-2xl shadow-lg mx-4 reveal slide-up opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+  <h3 class="text-xl font-old mb-4 text-abang text-center">Ucapan &amp; Doa</h3>
+  <div id="listUcapan" class="space-y-4"></div>
+
+  <!-- Pagination -->
+  <div class="flex justify-between mt-4">
+    <button id="prevBtn" class="bg-abang text-emas px-4 py-2 rounded-lg font-dosis disabled:opacity-50">Prev</button>
+    <button id="nextBtn" class="bg-abang text-emas px-4 py-2 rounded-lg font-dosis disabled:opacity-50">Next</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="hidden fixed bottom-5 right-5 left-5 bg-abang text-semi px-4 py-2 rounded-lg shadow-lg text-center font-dosis">
+  Terima kasih! Data berhasil dikirim
+</div>
+    </section>
+    
+<div id="footer"></div>
+
+<!-- audio -->
+<audio id="bg-music" src="./musik/bcksnd.mp3" loop></audio>
+    
+    <!-- script rsvp -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { 
+    getFirestore, collection, addDoc, query, orderBy, limit, getDocs,
+    startAfter, endBefore 
+  } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDKIBF6Q9v_eTvm9kdAEdQGc5aTOFm1DQ4",
+    authDomain: "undangan-kode-1.firebaseapp.com",
+    projectId: "undangan-kode-1",
+    storageBucket: "undangan-kode-1.firebasestorage.app",
+    messagingSenderId: "105752929482",
+    appId: "1:105752929482:web:61f889692f5f0e5b9b8033",
+    measurementId: "G-D2D2CNDFZT"
+  };
+
+  // 🔑 GANTI NAMA COLLECTION DI SINI
+  const collectionName = "rsvp_client1";  
+
+  // Init
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // State pagination
+  let lastVisible = null;
+  let firstVisible = null;
+  let currentPage = [];
+
+  // Handle Submit
+  const form = document.getElementById("rsvpForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const nama = document.getElementById("nama").value.trim();
+    const status = document.getElementById("status").value;
+    const ucapan = document.getElementById("ucapan").value.trim();
+
+    if (!nama || !status) return showToast("Isi nama & status dulu ya!");
+
+    try {
+      await addDoc(collection(db, collectionName), {
+        nama,
+        status,
+        ucapan,
+        createdAt: new Date()
+      });
+
+      form.reset();
+      showToast("Terima kasih! Data berhasil dikirim 🙏");
+      loadUcapan(); // refresh tampilan
+      updateCounter(); // refresh counter
+    } catch (err) {
+      console.error("Error:", err);
+      showToast("⚠️ Gagal kirim data, coba lagi.");
+    }
+  });
+
+  // 🔹 Hitung counter Hadir/Tidak/Ragu
+  async function updateCounter() {
+    const q = query(collection(db, collectionName));
+    const snapshot = await getDocs(q);
+    let hadir = 0, tidak = 0, ragu = 0;
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      if (data.status === "Hadir") hadir++;
+      if (data.status === "Tidak Hadir") tidak++;
+      if (data.status === "Ragu") ragu++;
+    });
+
+    document.getElementById("countHadir").innerText = hadir;
+    document.getElementById("countTidak").innerText = tidak;
+    document.getElementById("countRagu").innerText = ragu;
+  }
+
+  // 🔹 Load ucapan dengan pagination
+  async function loadUcapan(direction = "first") {
+    const list = document.getElementById("listUcapan");
+    list.innerHTML = "";
+
+    let q;
+    if (direction === "first") {
+      q = query(collection(db, collectionName), orderBy("createdAt", "desc"), limit(5));
+    } else if (direction === "next" && lastVisible) {
+      q = query(collection(db, collectionName), orderBy("createdAt", "desc"), startAfter(lastVisible), limit(5));
+    } else if (direction === "prev" && firstVisible) {
+      q = query(collection(db, collectionName), orderBy("createdAt", "desc"), endBefore(firstVisible), limit(5));
+    } else {
+      return;
+    }
+
+    const snapshot = await getDocs(q);
+
+    if (!snapshot.empty) {
+      currentPage = snapshot.docs;
+      firstVisible = snapshot.docs[0];
+      lastVisible = snapshot.docs[snapshot.docs.length - 1];
+
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.ucapan) {
+          list.innerHTML += `
+            <div class="bg-white p-3 rounded-lg shadow">
+              <p class="font-bold text-abang">${data.nama}</p>
+              <p class="text-sm">${data.ucapan}</p>
+              <p class="text-xs text-gray-500 italic">${data.status}</p>
+            </div>
+          `;
+        }
+      });
+    }
+
+    // Disable prev/next kalau ga ada halaman
+    document.getElementById("prevBtn").disabled = !firstVisible;
+    document.getElementById("nextBtn").disabled = snapshot.size < 5;
+  }
+
+  // 🔹 Toast custom
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    toast.classList.add("opacity-100");
+
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 3000);
+  }
+
+  // Event tombol pagination
+  document.getElementById("nextBtn").addEventListener("click", () => loadUcapan("next"));
+  document.getElementById("prevBtn").addEventListener("click", () => loadUcapan("prev"));
+
+  // Initial load
+  loadUcapan("first");
+  updateCounter();
+</script>
+
+<!-- SECTION: Countdown Script -->
+<script>
+  // countdownTimer
+  const targetDate = new Date("Dec 18, 2028 08:00:00").getTime();
+  const countdownTimer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    if (distance < 0) {
+      clearInterval(countdownTimer);
+      document.getElementById("countdown").innerHTML = "<p class='text-xl'>Acara sudah dimulai 🎉</p>";
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }, 1000);
+  
+  
+  //galleri
+  function changeBg(img) {
+      const bg = document.getElementById('background');
+      bg.style.backgroundImage = `url(${img})`;
+    }
+    
+  //animasi
+  // Buat observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+
+      // Slide dari kiri
+      if (el.classList.contains("slide-left")) {
+        el.classList.remove("opacity-0", "-translate-x-10");
+        el.classList.add("opacity-100", "translate-x-0");
+      }
+
+      // Slide dari kanan
+      if (el.classList.contains("slide-right")) {
+        el.classList.remove("opacity-0", "translate-x-10");
+        el.classList.add("opacity-100", "translate-x-0");
+      }
+      
+      // slide-down
+if (el.classList.contains("slide-down")) {
+  el.classList.remove("opacity-0", "-translate-y-10");
+  el.classList.add("opacity-100", "translate-y-0");
+}
+
+
+      // Slide dari bawah
+      if (el.classList.contains("slide-up")) {
+        el.classList.remove("opacity-0", "translate-y-10");
+        el.classList.add("opacity-100", "translate-y-0");
+      }
+
+      // Fade in
+      if (el.classList.contains("fade-in")) {
+        el.classList.remove("opacity-0");
+        el.classList.add("opacity-100");
+      }
+
+      // Zoom in
+      if (el.classList.contains("zoom-in")) {
+        el.classList.remove("opacity-0", "scale-95");
+        el.classList.add("opacity-100", "scale-100");
+      }
+
+      // Kalau sudah kelihatan, stop observe biar ga diulang
+      observer.unobserve(el);
+    }
+  });
+});
+
+// Observe semua elemen dengan class .reveal
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+  
+    //panggil section
+  function loadSection(id, url) {
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Gagal load " + url);
+      }
+      return response.text();
+    })
+    .then(data => {
+      const container = document.getElementById(id);
+      container.innerHTML = data;
+
+      // Re-observe elemen baru yang ada .reveal
+      container.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
+}
+
+  // panggil section
+  loadSection("mempelai", "./mempelai.html");
+  loadSection("qoutes", "./qoutes.html")
+  loadSection("acara", "./acara.html");
+  loadSection("story", "./story.html");
+  loadSection("gallery", "./gallery.html");
+  loadSection("closing", "./closing.html");
+  loadSection("footer", "./footer.html");
+  
+  //musik
+  window.addEventListener("DOMContentLoaded", () => {
+            const music = document.getElementById("bg-music");
+        
+            // coba autoplay
+            music.play().catch(() => {
+              console.log("Autoplay diblokir, munculin popup manual");
+        
+              // bikin popup kecil
+              const popup = document.createElement("div");
+              popup.innerHTML = `
+                <div class="fixed bottom-4 right-4 bg-[#56001d] text-[#56001d] px-4 py-2 rounded-full shadow-lg flex items-center gap-2 cursor-pointer animate-bounce">
+                  🎵
+                </div>
+              `;
+              
+              popup.onclick = () => {
+                music.play();
+                popup.remove(); // ilangin popup setelah musik nyala
+              };
+        
+              document.body.appendChild(popup);
+            });
+          });
+</script>
+   </body>
+   </html>
